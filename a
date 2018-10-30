@@ -1,0 +1,11 @@
+FROM node:8
+
+WORKDIR /admin-photo-client
+
+RUN npm install http-server
+
+ADD . /docker-production-demo/
+
+EXPOSE 8989
+
+CMD ["http-server"]
