@@ -9,7 +9,10 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     packs: [],
-    user: null
+    user: {
+      name: 'jollydiem',
+      id: 1
+    }
   },
   actions,
   getters,
