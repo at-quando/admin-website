@@ -14,7 +14,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"> Dashboard </a>
+        <a class="navbar-brand" href="#"> Dashboard</a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -70,24 +70,42 @@
           </button>
         </form>
       </div>
+      <ol class="breadcrumb">
+        <li><a href="/">Dashboard</a></li>
+        <li class="ng-star-inserted">
+          <a href="/organisation/teams" class="ng-star-inserted" style="pointer-events: auto;">
+            Articles
+          </a>
+        </li>
+        <li class="active ng-star-inserted">
+          <strong>List</strong>
+        </li> 
+      </ol>
     </div>
   </nav>
 </template>
 <script>
 export default {
-   methods: {
-    logout () {
-      localStorage.removeItem('ACCESS_TOKEN')
-      localStorage.removeItem('UID')
-      localStorage.removeItem('PROVIDER')
-      this.$http.delete('session/1')
-      .then(response => {
-        this.$http.headers.common['Access-Token'] = null
-        this.$http.headers.common['Uid'] = null
-        this.$http.headers.common['Provider'] = null
-        window.location.href = '/auth/login'
-      })
+  methods: {
+    logout() {
+      localStorage.removeItem("ACCESS_TOKEN");
+      localStorage.removeItem("UID");
+      localStorage.removeItem("PROVIDER");
+      this.$http.delete("session/1").then(response => {
+        this.$http.headers.common["Access-Token"] = null;
+        this.$http.headers.common["Uid"] = null;
+        this.$http.headers.common["Provider"] = null;
+        window.location.href = "/auth/login";
+      });
     }
   }
-}
+};
 </script>
+
+<style>
+.breadcrumb {
+  padding: 0 0 0 40px;
+  background-color: #EEEEEE;
+  margin-bottom: 0;
+}
+</style>

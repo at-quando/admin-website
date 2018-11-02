@@ -19,3 +19,8 @@ export default {
   }
 }
 </script>
+<style>
+.content {
+  margin-top: 75px !important;
+}
+</style>

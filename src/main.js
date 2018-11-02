@@ -7,6 +7,14 @@ import directive from './helper/directive'
 import router from './router'
 import VueResource from 'vue-resource'
 import GlobalComponents from './GlobalComponent'
+
+import VueQuillEditor from 'vue-quill-editor'
+
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
 // import VueI18n from 'vue-i18n'
 // import i18n from './locales/config'
 import ElementUI from 'element-ui'
@@ -39,6 +47,7 @@ import '../static/jquery.tagsinput.js'
 import '../static/material-dashboard.js'
 import '../static/demo.js'
 
+Vue.use(VueQuillEditor)
 Vue.use(ElementUI)
 // Vue.use(VueI18n)
 Vue.use(Vuex)
