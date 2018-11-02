@@ -8,24 +8,15 @@ import Features from '@/components/features'
 import AppView from '@/components/ComponentMain/app-view'
 import Dashboard from '@/components/ComponentMain/dashboard'
 
-import Schedule from '@/components/ComponentMain/job/schedule'
-import Assignment from '@/components/ComponentMain/job/assignment'
-import AssignmentId from '@/components/ComponentMain/job/assignmentid'
-import Task from '@/components/ComponentMain/job/task'
-import MakeContracts from '@/components/ComponentMain/job/make-contracts'
-import Contracts from '@/components/ComponentMain/job/contracts'
-import Team from '@/components/ComponentMain/team/your-team'
-import TeamDetail from '@/components/ComponentMain/team/detail-team'
-import TeamMake from '@/components/ComponentMain/team/make-team'
-import BossReview from '@/components/ComponentMain/review/boss'
-import CustomerReview from '@/components/ComponentMain/review/customer'
-import Dept from '@/components/ComponentMain/finance/dept'
-import Income from '@/components/ComponentMain/finance/income'
-import Salary from '@/components/ComponentMain/finance/salary'
-import Devices from '@/components/ComponentMain/device/devices'
-import Hiring from '@/components/ComponentMain/device/hiring'
-import UserProfile from '@/components/ComponentMain/user/profile'
-
+import Articles from '@/components/ComponentMain/article/list'
+import Post from '@/components/ComponentMain/article/post'
+import Albums from '@/components/ComponentMain/album/list'
+import AlbumNew from '@/components/ComponentMain/album/new'
+import Videos from '@/components/ComponentMain/video/list'
+import VideoNew from '@/components/ComponentMain/video/new'
+// import MakeContracts from '@/components/ComponentMain/job/make-contracts'
+// import Contracts from '@/components/ComponentMain/job/contracts'
+// import Team from '@/components/ComponentMain/team/your-team'
 Vue.use(Router)
 
 const router = new Router({
@@ -70,90 +61,60 @@ const router = new Router({
               name: 'Dashboard'
             },
             {
-              path: 'schedule',
-              component: Schedule,
-              name: 'Schedule'
+              path: 'articles/list',
+              component: Articles,
+              name: 'List'
             },
             {
-              path: 'assignment',
-              component: Assignment,
-              name: 'Assignment'
+              path: 'articles/new',
+              component: Post,
+              name: 'Article'
             },
             {
-              path: 'assignment/:id',
-              component: AssignmentId,
-              name: 'AssignmentId'
+              path: 'albums/list',
+              component: Albums,
+              name: 'Albums'
             },
             {
-              path: 'task',
-              component: Task,
-              name: 'Task'
+              path: 'albums/new',
+              component: AlbumNew,
+              name: 'Album'
             },
             {
-              path: 'team',
-              component: Team,
-              name: 'Team'
+              path: 'videos/list',
+              component: Videos,
+              name: 'Videos'
             },
             {
-              path: 'team/new',
-              component: TeamMake,
-              name: 'TeamMake'
-            },
-            {
-              path: 'team/:id/member',
-              component: TeamDetail,
-              name: 'TeamDetail'
-            },
-            {
-              path: 'boss-review',
-              component: BossReview,
-              name: 'BossReview'
-            },
-            {
-              path: 'customer-review',
-              component: CustomerReview,
-              name: 'CustomerReview'
-            },
-            {
-              path: 'finance/income',
-              component: Income,
-              name: 'Income'
-            },
-            {
-              path: 'finance/salary',
-              component: Salary,
-              name: 'Salary'
-            },
-            {
-              path: 'finance/dept',
-              component: Dept,
-              name: 'Dept'
-            },
-            {
-              path: 'devices',
-              component: Devices,
-              name: 'Devices'
-            },
-            {
-              path: 'devices/hiring',
-              component: Hiring,
-              name: 'Hiring'
-            },
-            {
-              path: 'contracts/new',
-              component: MakeContracts,
-              name: 'MakeContracts'
-            },
-            {
-              path: 'contracts',
-              component: Contracts,
-              name: 'Contracts'
-            },
-            {
-              path: 'user',
-              component: UserProfile,
-              name: 'UserProfile'
+              path: 'videos/new',
+              component: VideoNew,
+              name: 'Video'
             }
+            // {
+            //   path: 'devices',
+            //   component: Devices,
+            //   name: 'Devices'
+            // },
+            // {
+            //   path: 'devices/hiring',
+            //   component: Hiring,
+            //   name: 'Hiring'
+            // },
+            // {
+            //   path: 'contracts/new',
+            //   component: MakeContracts,
+            //   name: 'MakeContracts'
+            // },
+            // {
+            //   path: 'contracts',
+            //   component: Contracts,
+            //   name: 'Contracts'
+            // },
+            // {
+            //   path: 'user',
+            //   component: UserProfile,
+            //   name: 'UserProfile'
+            // }
           ]
         }
       ]
